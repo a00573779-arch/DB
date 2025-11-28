@@ -1,0 +1,113 @@
+:root {
+    --primary-color: #444444; /* Gris oscuro para los botones */
+    --primary-color-light: #666666; /* Gris claro para hover en botones */
+}
+
+/* Fondo azul claro para la aplicación */
+.stApp {
+    background-color: #90CAF9;  /* Azul claro */
+    color: white;
+}
+
+/* Sidebar azul oscuro con texto blanco */
+[data-testid="stSidebar"] {
+    background-color: #0D47A1; /* Azul oscuro */
+}
+[data-testid="stSidebar"] * {
+    color: white;
+}
+
+/* Botones de los filtros en gris oscuro */
+.stButton > button {
+    background-color: #444444; /* Gris oscuro */
+    color: white;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* Ajustes para los select boxes y sliders en gris oscuro */
+.stSelectbox > div[data-baseweb="select"] > div {
+    background-color: #bdbdbd;  /* Gris claro */
+    color: black;
+}
+
+/* Texto blanco en el contenido de la aplicación */
+.stApp div,
+.stApp p,
+.stApp span,
+.stApp label,
+.stApp h1,
+.stApp h2,
+.stApp h3,
+.stApp h4,
+.stApp h5,
+.stApp h6 {
+    color: white;
+}
+
+/* Para esconder el icono de menú (hamburguer icon) */
+.st-emotion-cache-1pbsqtx {
+    display: none;
+}
+
+.st-emotion-cache-1wbqy5l {
+    display: none;
+}
+
+h1, h2, h3, h4, h5, h6, label {
+    color: white;
+}
+
+p {
+    color: white;
+}
+
+/* Cambiar color de los multiselect */
+    [data-baseweb="tag"] {
+      background-color: #444444 !important;  /* Gris oscuro */
+    
+    /* Cambiar color del texto en los tags */
+    [data-baseweb="tag"] span {
+        color: white !important;
+    }
+    /* Cambiar color de los sliders */
+    .stSlider [data-baseweb="slider"] [role="slider"] {
+        background-color: #007bff !important;  /* Color del thumb del slider */
+    }
+    
+    .stSlider [data-baseweb="slider"] div[data-testid="stTickBar"] > div {
+        background-color: #007bff !important;  /* Color de la barra del slider */
+    }
+
+/* Cambiar el color de los sliders en la barra lateral a gris oscuro */
+.stSidebar .stSlider [data-baseweb="slider"] [role="slider"] {
+    background-color: #444444 !important; /* Gris oscuro para los puntos del slider */
+}
+
+/* Cambiar el color de la barra activa (la parte seleccionada) en la barra lateral */
+.stSidebar .stSlider [data-baseweb="slider"] div[data-testid="stTickBar"] > div {
+    background-color: #444444 !important; /* Gris oscuro para la barra activa */
+}
+
+/* Cambiar el color de la barra de fondo (track) en la barra lateral */
+.stSidebar .stSlider [data-baseweb="slider"] > div:first-child > div:first-child {
+    background-color: rgba(68, 68, 68, 0.3) !important; /* Gris claro para la barra de fondo */
+}
+
+/* Barra de progreso entre los dos thumbs (para range sliders) en la barra lateral */
+.stSidebar .stSlider [data-baseweb="slider"] > div > div > div > div {
+    background-color: #444444 !important; /* Gris oscuro */
+}
+
+/* Alternativa más específica para la barra activa en la barra lateral */
+.stSidebar [data-testid="stTickBar"] div {
+    background-color: #444444 !important; /* Gris oscuro */
+}
+
+/* Track bar (línea gris de fondo) en la barra lateral */
+.stSidebar [class*="StyledThumb"] {
+    background-color: #444444 !important; /* Gris oscuro */
+    border-color: #444444 !important; /* Gris oscuro */
+}
