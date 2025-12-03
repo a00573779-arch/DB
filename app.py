@@ -12,7 +12,7 @@ with open(css_path) as css_file:
     st.markdown(f"<style>{css_file.read()}</style>", unsafe_allow_html=True)
 
 st.set_page_config(page_title="Bad Drivers Dashboard", page_icon="🚗", layout="wide")
-st.title("🚦 Análisis de Conductores en Colisiones Fatales")
+st.title("Analysis of Drivers in Fatal Collisions")
 st.caption("Filtros: Alcohol-Impaired & Not Distracted")
 
 def norm(s):
@@ -104,22 +104,22 @@ if premium_groups:
 filtered = df[mask]
 
 c1, c2, c3 = st.columns(3)
-c1.metric("Promedio Alcohol-Impaired", f"{filtered[COL_ALC].mean():.2f}%")
-c2.metric("Promedio Not Distracted", f"{filtered[COL_NOTD].mean():.2f}%")
+c1.metric("Average Alcohol-Impaired", f"{filtered[COL_ALC].mean():.2f}%")
+c2.metric("Average Not Distracted", f"{filtered[COL_NOTD].mean():.2f}%")
 c3.metric("Registros filtrados", len(filtered))
 
 tab1, tab2, tab3, tab4, tab5 = st.tabs([
-    "Mapa por Estado",
-    "Distribución Not Distracted",
-    "Relación Alcohol vs Not Distracted",
-    "Conductores por Estado y Prima",
-    "Distribución Alcohol-Impaired",
+    "Map by state",
+    "Distribution Not Distracted",
+    "Relation Alcohol vs Not Distracted",
+    "Drivers by State and Premium",
+    "Distribution Alcohol-Impaired",
 ])
 
 sns.set_theme(style="whitegrid")
 
 with tab1:
-    st.subheader("Mapa de conductores por estado (fatal collisions per billion miles)")
+    st.subheader("Map of Drivers by State (Fatal Collisions per Billion Miles)")
     STATE_ABBREVS = {
         'Alabama': 'AL', 'Alaska': 'AK', 'Arizona': 'AZ', 'Arkansas': 'AR', 'California': 'CA',
         'Colorado': 'CO', 'Connecticut': 'CT', 'Delaware': 'DE', 'District of Columbia': 'DC',
